@@ -1,30 +1,21 @@
 <div class="container">
     <div id="carouselExampleControls" class="carousel slide margin-bottom" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            {{#each activities}}
+                {{#if @first}}
+                    <div class="carousel-item active">
+                {{else}}
+                    <div class="carousel-item">
+                {{/if}}
+                        <div class="card" >
+                            <div class="card-body">
+                                <h5 class="card-title">Check out Where others have been!</h5>
+                                <p class="card-text">Some user has been to {{this.location}} on {{this.date}}.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+            {{/each}}
+            
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -39,27 +30,8 @@
         <div class="col-sm">
             <div class="card" >
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" >
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="card" >
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">About The Website</h5>
+                    <p class="card-text">This web application allows users to register an account, login and log activities that they do. Currently the app allows for logging of Downhill skiing, Cross Country Skiing and Running.</p>
                 </div>
             </div>
         </div>
